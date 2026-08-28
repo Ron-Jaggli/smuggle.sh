@@ -16,7 +16,7 @@ Tested in ArchLinux, Fedora. Archlinux users, please use linux-xanmod-anbox kern
 More in [Waydroid Telegram](https://t.me/WayDroid)
 
 ## Bugs
-1. **Zygisk not yet working (No ETA)**.
+1. **Zygisk not yet working (No ETA)**. See [docs/zygisk-integration-plan.md](docs/zygisk-integration-plan.md) for the design/proposal to make it work.
 
     Currently, this script is using MagiskonWSA method in patching initrc so that it would load magisk su binaries close to the end of initrc, before ui started. However zygote is usually loaded at the start of initrc, meaning it would be too late to replace zygote with zygisk zygote by the time su from magisk is loaded. 
     
